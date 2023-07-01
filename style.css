@@ -1,8 +1,38 @@
-html, body {
-	margin: 0;
-	padding: 0;
-	width: 100vw;
-	height: 100vh;
-	}
-
-
+body {
+	background-color: #2e3131;
+	color: #f7f9f7;/*text color*/
+	font-family: "Fira Mono";
+	text-align: center;
+}
+#slices, #options {
+	margin: auto;
+	width: 90%;
+}
+table, th, td {
+  	border:1px solid #f7f9f7;
+  	border-collapse: collapse;
+}
+th {
+	padding: 4px;
+}
+table {
+	width: 100%;
+}
+input {
+	background-color: #f7f9f7;
+	border: none;
+	padding: 4px;
+	color: #2e3131;
+	font-family: "Fira Mono";
+}
+input[type=text] {
+	width: 30%;
+}
+input[type=button] {
+	width: 15%;
+}
+#footer {
+	width: 90%;
+	position: absolute;
+	bottom: 0px;
+}

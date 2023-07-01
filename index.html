@@ -1,14 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>pizzadreisatz</title>
-	
 	<link rel="stylesheet" type="text/css" href="style.css">
-	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet"> 
 </head>
 <body>
-	
-	<script src="function.js"></script>
+	<h1>pizzadreisatz</h1>
+	<h3 id="stats">0€ -> 0€</h3>
+	<div id="slices">
+		<table>
+			<tr>
+				<th rowspan="2">name</th>
+				<th rowspan="2">sum</th>
+				<th colspan="4">slices</th>
+			</tr>
+			<tr>
+				<th>1.30</th>
+				<th>1.40</th>
+				<th>1.50</th>
+				<th>1.60</th>
+			</tr>
+		</table>
+	<div id="options">
+		<table>
+			<tr>
+				<td colspan="5">
+					<input type="text" id="newName" placeholder="name">
+					<input type="button" value="add" onclick="addPerson()">
+					<input type="button" value="del" onclick="kill()">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="footer">
+		der pizzabar rechner damit jeder weiß, wie viel beim gemeinsamen kaufen gezahlt werden muss.
+		<p/>
+		lukas & mathis, TUHH 2023
+	</div>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
