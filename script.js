@@ -17,14 +17,17 @@ function addPerson() {
 		newBox = document.createElement("td");
 		newBox.innerText= "0";
 		newBox.id = nPersons + "" + i;
-		newBox.onclick = function () {
-			current = parseInt(this.innerText);
-			if (current >= 8) {
-				current = -1;
-			}
-			this.innerText = current + 1;
-			doMath();
-		};
+		const isSum = i == 0;
+		if(!isSum) {
+			newBox.onclick = function () {
+				current = parseInt(this.innerText);
+				if (current >= 8) {
+					current = -1;
+				}
+				this.innerText = current + 1;
+				doMath();
+			};
+		}
 		newLine.appendChild(newBox);
 	}
 	tableRows.appendChild(newLine);
@@ -77,6 +80,7 @@ function doMath() {
 }
 
 function kill() {//delete last person
+	if(nPersons < 1) return;
 	document.getElementById("slices").children[0].children[0].deleteRow(nPersons+1);
 	nPersons--;
 	doMath();
