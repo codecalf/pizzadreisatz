@@ -3,7 +3,8 @@ nSlices = 0;
 table = [];
 
 function addPerson() {
-	name = document.getElementById("newName").value;
+	nameInput = document.getElementById("newName");
+	name = nameInput.value;
 	if (name == "") {
 		name = "player " + nPersons;
 	}
@@ -32,6 +33,7 @@ function addPerson() {
 	}
 	tableRows.appendChild(newLine);
 	table.push([0,0,0,0,0]);
+	nameInput.value = "";
 	nPersons++;
 }
 
@@ -90,6 +92,5 @@ function kill() {//delete last person
 document.getElementById("newName").addEventListener("keydown", function (e) {
 	if (e.code === "Enter") {
 		addPerson();
-		this.value = "";
 	}
 });
